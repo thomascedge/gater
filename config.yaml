@@ -1,0 +1,12 @@
+supported_languages:
+  ar: Arabic
+  de: German
+  en: English
+  fr: French
+tokens_last_updated: '2025-03-27 11:50:31'
+version: 0.0.1
+vocab_sizes:
+  ar: 0
+  de: 0
+  en: 450
+  fr: 424
