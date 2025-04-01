@@ -2,7 +2,7 @@ import torch
 import torch.nn as nn
 import math
 
-class EmbeddingLayer(nn.Model):
+class EmbeddingLayer(nn.Module):
     def __init__(self, d_model: int, vocab_size: int):
         super().__init__()
         self.d_model = d_model

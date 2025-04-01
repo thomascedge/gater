@@ -197,10 +197,3 @@ class ModelBuilder():
         }, model_filename)
 
     # train_model()
-
-
-# build model, test, and show model architecture
-MAX_SEQ_LENGTH = 155
-build = ModelBuilder()
-model = build.build_model(tokenizer_en.get_vocab_size(), tokenizer_target.get_vocab_size(), max_seq_len, d_model_512).to(device)
-LOG.info(model)

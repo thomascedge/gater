@@ -3,7 +3,7 @@ from util.encoder import Encoder
 from util.embedding import EmbeddingLayer, PositionalEncoding
 from util.decoder import Decoder, ProjectionLayer
 
-class Transformer(nn.module):
+class Transformer(nn.Module):
     def __init__(self, encoder: Encoder, decoder: Decoder, source_embed: EmbeddingLayer, 
                  target_embed: EmbeddingLayer, source_pos: PositionalEncoding, 
                  target_pos: PositionalEncoding, projection_layer: ProjectionLayer):

@@ -4,7 +4,6 @@ import torch.nn as nn
 class FeedForward(nn.Module):
     def __init__(self, d_model: int, d_ff: int, dropout_rate: float):
         super().__init__()
-
         self.dropout = nn.Dropout(dropout_rate)
         self.layer_1 = nn.Linear(d_model, d_ff)
         self.layer_2 = nn.Linear(d_ff, d_model)

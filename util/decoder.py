@@ -4,7 +4,7 @@ from util.feedback import FeedForward, AddAndNorm, LayerNorm
 
 class DecoderBlock(nn.Module):
     def __init__(self, masked_multihead_attention: MultiHeadAttention, cross_multihead_attention: MultiHeadAttention, feed_forward: FeedForward, droupout_rate: float):
-        super().__init()
+        super().__init__()
         self.masked_multihead_attention = masked_multihead_attention
         self.cross_multihead_attention = cross_multihead_attention
         self.feed_forward = feed_forward
@@ -40,7 +40,7 @@ class Decoder(nn.Module):
 class ProjectionLayer(nn.Module):
     def __init__(self, d_model, vocab_size):
         super().__init__()
-        self.projection_layer = nn.layer(d_model, vocab_size)
+        self.projection_layer = nn.Linear(d_model, vocab_size)
 
     def forward(self, decoder_output):
         # projection layer first takes in decoder and feeds it into the linear

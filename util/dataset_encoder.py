@@ -1,7 +1,8 @@
 import torch
 
+from pathlib import Path
 from torch.utils.data import Dataset
-from util.tokenizer import Tokenizer
+from .tokenizer import Tokenizer
 
 class EncodedDataset(Dataset):
     def __init__(self, raw_datdaset, max_seq_len):
@@ -21,9 +22,13 @@ class EncodedDataset(Dataset):
         self.mex_seq_len = max_seq_len
 
         # TODO: add check for filename 
-        tokenizer = Tokenizer()
-        self.tokenizer_en = tokenizer.tokenizer_en
-        self.tokenizer_target = tokenizer.tokenizer_target
+        # tokenizer = Tokenizer()
+
+        # if Path('./gater_lib/english/').exists():
+        #     language = tokenizer._welcome()
+        #     tokeinzer_en, tokeinzer_target = tokenizer.get_tokenizer_from_file(language)
+        # else: 
+        #     tokeinzer_en, tokeinzer_target = tokenizer.create_tokenizers()
 
     def __len__(self):
         return len(self.raw_dataset)

@@ -1,7 +1,7 @@
 import math
 import torch.nn as nn
 
-class MultiHeadAttention(nn.Model):
+class MultiHeadAttention(nn.Module):
     def __init__(self, d_model: int, num_heads: int, dropout_rate: float):
         super().__init__()
 
